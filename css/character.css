@@ -1,0 +1,36 @@
+.JOJO_font {
+    /* 文字 */
+    color: white;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+    font-style: italic;
+    text-align: center;
+    letter-spacing: 4px;
+    margin: 40px;
+}
+
+.character {
+    display: flow-root;
+    /* BFC去除浮动干扰且无副作用 */
+    /* position: relative; */
+    /* border: 4px solid black; */
+}
+
+
+.character img {
+    float: right;
+    box-shadow: 10px 10px 2px 2px rgb(72, 68, 68);
+    border: 2px solid black;
+    aspect-ratio: 0.5;
+    width: 350px;
+    /* top: 80px;
+    right: 100px;
+    position: absolute; */
+}
+
+.character p{
+    text-align: center;
+    font-size: larger;
+    padding: 4px;
+    letter-spacing: 2px;
+}

@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: JOJO_ENGLISH;
+    src: url(/JOJO的奇妙冒险/audio/BarlowCondensed-ExtraBoldItalic.ttf);
+}
+
+.header {
+    font: bolder larger JOJO_ENGLISH;
+    color: transparent;
+    background: linear-gradient(to right, #ff008c, #0088ff, #ff00bf, #00d9ff);
+    background-clip: text;
+    letter-spacing: 1px;
+    float: left;
+    padding: 0 20px;
+}
+
+ .nav {
+    float: right;
+    width: 100%;
+    z-index: 10;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+}
+
+ul.nav_section {
+    overflow: hidden;
+    background-color: hsl(51, 100%, 51%);
+    border: solid 4px;
+    border-top: 1px solid;
+    box-shadow: 20px 4px 16px 8px hsl(248, 31%, 20%);
+    border-radius: 10px;
+}
+
+li.nav_section {
+    float: right;
+    width: 120px;
+    text-align: center;
+    border-right: 2px solid hsl(248, 31%, 20%);
+    box-shadow: 1px 0 2px 1px hsl(248, 31%, 20%);
+    border-radius: 6px;
+    transition: all 0.5s;
+}
+
+li.nav_section a {
+    display: block;
+    text-decoration: none;
+    color: hsl(248, 31%, 20%);
+    font: larger bolder;
+    padding: 14px 16px;
+    text-align: center;
+}
+
+.nav_active {
+    background-color: hsl(51, 100%, 40%);
+}
+
+li.nav_section:hover:not(.nav_active) {
+    background-color: hsl(50, 80%, 50%);
+}
