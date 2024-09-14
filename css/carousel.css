@@ -1,7 +1,7 @@
 div.carousel {
     margin: 8px auto;
-    width: 1080px;
-    height: 600px;
+    width: 1280px;
+    aspect-ratio: 1.769;
     overflow: hidden;
     box-sizing: border-box;
     border: 4px solid black;

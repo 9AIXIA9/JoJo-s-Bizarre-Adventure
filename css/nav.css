@@ -12,7 +12,7 @@ a {
 
 @font-face {
     font-family: JOJO_ENGLISH;
-    src: url(/JOJO的奇妙冒险/audio/BarlowCondensed-ExtraBoldItalic.ttf);
+    src: url(../font/BarlowCondensed-ExtraBoldItalic.ttf);
 }
 
 .header {
@@ -25,14 +25,14 @@ a {
     padding: 0 20px;
 }
 
- .nav {
+.nav {
     float: right;
     width: 100%;
     z-index: 10;
 }
 
-.fixed {
-    position: fixed;
+.sticky {
+    position: sticky;
     top: 0;
 }
 

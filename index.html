@@ -5,13 +5,13 @@
 <head>
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/character.css">
+    <link rel="stylesheet" href="./css/text-slide.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JOJO的奇妙冒险·主页</title>
 </head>
 
 <body>
-
     <div class="nav">
         <ul class="nav_section">
             <div class="header">
@@ -27,12 +27,12 @@
                     </svg>
                     关于
                 </a></li>
-            <li class="nav_section"><a href="./interact.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 256 256">
+            <li class="nav_section"><a href="./rank.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                         <path fill="#000000"
-                            d="M247.44 173.75a.7.7 0 0 0 0-.14l-16.39-84.17v-.18A60.08 60.08 0 0 0 172 40H83.89a59.88 59.88 0 0 0-59 49.52L8.58 173.61a.7.7 0 0 0 0 .14a36 36 0 0 0 60.9 31.71l.35-.37L109.52 160h37l39.71 45.09c.11.13.23.25.35.37A36.08 36.08 0 0 0 212 216a36 36 0 0 0 35.43-42.25ZM104 112h-8v8a8 8 0 0 1-16 0v-8h-8a8 8 0 0 1 0-16h8v-8a8 8 0 0 1 16 0v8h8a8 8 0 0 1 0 16m40-8a8 8 0 0 1 8-8h24a8 8 0 0 1 0 16h-24a8 8 0 0 1-8-8m84.37 87.47a19.84 19.84 0 0 1-12.9 8.23a20.09 20.09 0 0 1-17.47-5.39L167.8 160h4.2a60 60 0 0 0 51-28.38l8.74 45a19.82 19.82 0 0 1-3.37 14.85" />
+                            d="M11 10h2c1.414 0 2.121 0 2.56.44c.44.439.44 1.146.44 2.56v6c0-1.414 0-2.121.44-2.56C16.878 16 17.585 16 19 16s2.121 0 2.56.44c.44.439.44 1.146.44 2.56v3H2c0-1.414 0-2.121.44-2.56C2.878 19 3.585 19 5 19s2.121 0 2.56.44C8 19.878 8 20.585 8 22v-9c0-1.414 0-2.121.44-2.56C8.878 10 9.585 10 11 10m.146-6.977C11.526 2.34 11.716 2 12 2s.474.34.854 1.023l.098.176c.108.194.162.29.246.354c.085.064.19.088.4.135l.19.044c.738.167 1.107.25 1.195.532s-.164.577-.667 1.165l-.13.152c-.143.167-.215.25-.247.354s-.021.215 0 .438l.02.203c.076.785.114 1.178-.115 1.352c-.23.175-.576.015-1.267-.303l-.178-.082c-.197-.09-.295-.136-.399-.136s-.202.046-.399.136l-.178.082c-.691.318-1.037.478-1.267.303c-.23-.174-.191-.567-.115-1.352l.02-.203c.021-.223.032-.334 0-.438s-.104-.187-.247-.354l-.13-.152c-.503-.588-.755-.882-.667-1.165c.088-.282.457-.365 1.195-.532l.19-.044c.21-.047.315-.07.4-.135c.084-.064.138-.16.246-.354z" />
                     </svg>
-                    互动
+                    排名
                 </a></li>
             <li class="nav_section"><a href="./boss.html">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 512 512">
@@ -62,80 +62,359 @@
                 </a></li>
         </ul>
     </div>
+    <div class="video_box">
+        <video style="
+            display: block;
+            aspect-ratio: 1.769;
+            width: 1280px;
+            margin:0 auto;
+            box-sizing: border-box;
+            border: 4px solid black;
+            padding: 0;
+            box-shadow: 10px 10px 2px 2px rgb(72, 68, 68);" controls disablepictureinpicture poster="/image/横.png">
+            <source src="./video/JOJO.mp4" type="video/mp4">
+            您的浏览器不支持视频标签。
+        </video>
+    </div>
 
-    <div class="carousel">
-        <link rel="stylesheet" href="./css/carousel.css">
-
-        <script src="./js/carousel.js"></script>
-
-        <ul class="carousel_images">
-            <li class="carousel_image">
-                <a href="./JOJO.html"><img src="./image/carousel-1.png"></a>
-            </li>
-            <li class="carousel_image">
-                <a href="./JOJO.html"><img src="./image/carousel-2.png"></a>
-            </li>
-            <li class="carousel_image">
-                <a href="./JOJO.html"><img src="./image/carousel-3.png"></a>
-            </li>
-        </ul>
-        <div class="carousel_button_left">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-chevron-left" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
-            </svg>
-        </div>
-        <div class="carousel_button_right">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-chevron-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-            </svg>
-        </div>
-        <!-- 用于形成图片下面的小圈  -->
-        <ul class="carousel_circles">
-            <li class="carousel_circle"></li>
-            <li class="carousel_circle"></li>
-            <li class="carousel_circle"></li>
+    <div class="saying sticky JOJO_font" style="margin: 0;">
+        <ul style="height: 0;width: 100vw;position: relative;">
+            <div class="saying-slide-container">
+                <div class="saying-move">
+                    <li>
+                        <h2>人类的赞歌就是勇气的赞歌</h2>
+                    </li>
+                    <li>
+                        <h2>人的成长，就是战胜自己不成熟的过去</h2>
+                    </li>
+                    <li>
+                        <h2>所谓觉悟，就是在漆黑的荒野上开辟出一条理当前进的光明大道</h2>
+                    </li>
+                    <li>
+                        <h2>吾心吾行澄如明镜，所作所为皆属正义</h2>
+                    </li>
+                    <li>
+                        <h2>爱而得其人，乃最上之，爱而失其人，则仅次之</h2>
+                    </li>
+                    <li>
+                        <h2>一个人最致命的弱点往往会显示在他最真切的愿望里</h2>
+                    </li>
+                    <li>
+                        <h2>人就是这样，越是碰不得的东西，就越会想去碰</h2>
+                    </li>
+                </div>
+            </div>
         </ul>
     </div>
+
+    <div class="trans">
+
+    </div>
+    <!-- 用checkbox代替点击事件 -->
+    <input type="checkbox" id="inner-1" class="inner_act">
+    <input type="checkbox" id="inner-2" class="inner_act">
+    <input type="checkbox" id="inner-3" class="inner_act">
+    <input type="checkbox" id="inner-4" class="inner_act">
+    <input type="checkbox" id="inner-5" class="inner_act">
+    <input type="checkbox" id="inner-6" class="inner_act">
+    <!-- <audio autoplay></audio> -->
+
+    <audio controls class="audio" style="display: none;">
+        <source src="./audio/大乔.mp3" type="audio/mpeg" />
+    </audio>
+
+    <audio controls class="audio" style="display: none;">
+        <source src="./audio/二乔.mp3" type="audio/mpeg" />
+    </audio>
+
+    <audio controls class="audio" style="display: none;">
+        <source src="./audio/三乔.mp3" type="audio/mpeg" />
+    </audio>
+
+    <audio controls class="audio" style="display: none;">
+        <source src="./audio/四乔.mp3" type="audio/mpeg" />
+    </audio>
+
+    <audio controls class="audio" style="display: none;">
+        <source src="./audio/五乔.mp3" type="audio/mpeg" />
+    </audio>
+    <audio controls class="audio" style="display: none;">
+        <source src="./audio/六乔.mp3" type="audio/mpeg" />
+    </audio>
+
     <div class="main">
-        <div class="character">
-            <h1 class="JOJO_font">空条·承太郎</h1>
-            <a href="./JOJO-3.html">
-                <img src="./image/3JO/竖.png" alt="空条·承太郎">
-            </a>
-            <p>
-                时为1987年，乔瑟夫·乔斯达与“柱之男”们之间的死战后过了50年
-            </p>
-            <p>
-                乔瑟夫为了帮助“被恶灵附身了”的外孙子·空条承太郎而来到了日本
-            </p>
-            <p>
-                原来那并不是恶灵而是幽波纹（替身）
-            </p>
-            <p>替身突然出现的原因在于，从跨越100年的长眠中苏醒过来的吸血鬼·DIO与乔斯达家之间的令人忌讳的因缘</p>
-            <p>为了拯救受到DIO的诅咒而倒下的承太郎的母亲·荷莉，他们决定要打倒邪恶的化身·DIO，和伙伴们一起踏上了旅程</p>
+        <div class="inner">
+            <label for="inner-1">
+                <div>7</div>
+            </label>
+            <label for="inner-2">
+                <div>8</div>
+            </label>
+            <label for="inner-3">
+                <div>9</div>
+            </label>
+
+            <label for="inner-4">
+                <div>10</div>
+            </label>
+
+            <label for="inner-5">
+                <div>11</div>
+            </label>
+
+            <label for="inner-6">
+                <div>12</div>
+            </label>
+
+
+        </div>
+
+        <div class="outer">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
         </div>
     </div>
 </body>
 
 </html>
 
+<script>
+    let inner_photo = document.getElementsByClassName("inner_act")
+    let audio = document.getElementsByClassName("audio");
+    for (let i = 0; i < inner_photo.length; i++) {
+        inner_photo[i].addEventListener("change", (event) => {
+            if (event.target.checked) {
+                audio[i].load()
+                audio[i].play()
+            } else {
+                audio[i].pause()
+            }
+        })
+
+    }
+</script>
+
 <style>
-    body {
-        /* background-color:hsl(252, 92%, 74%); */
-        background: linear-gradient(#00ffff6a, #e3f6f5, #00ffff6a);
+    @keyframes move {
+        from {
+            transform: rotateY(360deg) rotateX(0);
+        }
+
+        to {
+            transform: rotateY(50deg) rotateX(70deg);
+            ;
+        }
     }
 
 
-    .main { 
-        clear: both;
-        width: 100%;
-        height: 2000px;
+    :root {
+        --outer-size: 600px;
+        --inner-size: 300px;
+    }
+
+    .main {
+        transform-style: preserve-3d;
+        width: var(--outer-size);
+        height: var(--outer-size);
+        margin: 0 auto;
+        position: relative;
+        animation: move 20s linear infinite;
+        transform-origin: center;
+    }
+
+
+    .main .outer div {
+        pointer-events: none;
         
     }
 
 
+    .main .outer {
+        transform-style: preserve-3d;
+        width: var(--outer-size);
+        height: var(--outer-size);
+        position: absolute;
+    }
+
+    .main .outer div {
+        width: var(--outer-size);
+        height: var(--outer-size);
+        background-color: rgba(112, 191, 197, 0.463);
+        /* background-image: url("image/dice/三乔.jpg"); */
+        position: absolute;
+        text-align: center;
+        line-height: var(--outer-size);
+        font-size: 5em;
+        border-radius: 25px;
+        border: solid rgba(255, 255, 255, 0.272) 3px;
+        transition: all 2s;
+        background-size: 0;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+
+    #inner-1:checked~.main .outer div:nth-child(1) {
+        background-image: url(./image/dice/大乔-2.png);
+        opacity: 1;
+        background-size: 100%;
+    }
+
+
+    #inner-2:checked~.main .outer div:nth-child(2) {
+        background-size: 100%;
+        background-image: url(./image/dice/二乔-2.png);
+        opacity: 1;
+    }
+
+    #inner-3:checked~.main .outer div:nth-child(3) {
+        background-size: 100%;
+        background-image: url(./image/dice/三乔-2.png);
+        opacity: 1;
+    }
+
+    #inner-4:checked~.main .outer div:nth-child(4) {
+        background-size: 100%;
+        background-image: url(./image/dice/四乔-2.png);
+        opacity: 1;
+    }
+
+    #inner-5:checked~.main .outer div:nth-child(5) {
+        background-size: 100%;
+        background-image: url(./image/dice/五乔-2.png);
+        opacity: 1;
+    }
+
+    #inner-6:checked~.main .outer div:nth-child(6) {
+        background-size: 100%;
+        background-image: url(./image/dice/六乔-2.png);
+        opacity: 1;
+    }
+
+
+    .main .inner {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transform-style: preserve-3d;
+        width: var(--inner-size);
+        height: var(--inner-size);
+    }
+
+
+    .main .inner label {
+        width: var(--inner-size);
+        height: var(--inner-size);
+        background-color: rgba(112, 191, 197, 0.463);
+        position: absolute;
+        font-size: 4em;
+        border-radius: 25px;
+        border: solid rgba(255, 255, 255, 0.272) 3px;
+    }
+
+    .main .inner div {
+        height: 100%;
+        width: 100%;
+        border: 1px solid black;
+        text-align: center;
+        line-height: var(--inner-size);
+    }
+
+    .main .outer>div:nth-child(1) {
+        transform: translateZ(calc(var(--outer-size) / 2));
+        
+        opacity: 0;
+    }
+
+    .main .outer>div:nth-child(2) {
+        transform: rotateY(90deg) translateZ(calc(var(--outer-size) / 2));
+        opacity: 0;
+    }
+
+    .main .outer>div:nth-child(3) {
+        transform: rotateY(180deg) translateZ(calc(var(--outer-size) / 2));
+        opacity: 0;
+    }
+
+    .main .outer>div:nth-child(4) {
+        transform: rotateY(-90deg) translateZ(calc(var(--outer-size) / 2));
+        opacity: 0;
+    }
+
+    .main .outer>div:nth-child(5) {
+        transform: rotateX(90deg) translateZ(calc(var(--outer-size) / 2));
+        opacity: 0;
+    }
+
+    .main .outer>div:nth-child(6) {
+        transform: rotateX(-90deg) translateZ(calc(var(--outer-size) / 2));
+        opacity: 0;
+    }
+
+    .main .inner label:nth-child(1) {
+        transform: translateZ(calc(var(--inner-size) / 2));
+        background-size: 100%;
+        border: solid black;
+        background-image: url(./image/dice/大乔.jpg);
+    }
+
+    .main .inner label:nth-child(2) {
+        transform: rotateY(90deg) translateZ(calc(var(--inner-size) / 2));
+        border: 1px solid black;
+        background-size: 100%;
+        background-image: url(./image/dice/二乔.jpg);
+    }
+
+    .main .inner label:nth-child(3) {
+        transform: rotateY(180deg) translateZ(calc(var(--inner-size) / 2));
+        border: 1px solid black;
+        background-size: 100%;
+        background-image: url(./image/dice/三乔.jpg);
+    }
+
+    .main .inner label:nth-child(4) {
+        transform: rotateY(-90deg) translateZ(calc(var(--inner-size) / 2));
+        background-size: 100%;
+        border: 1px solid black;
+        background-image: url(./image/dice/四乔.jpg);
+    }
+
+    .main .inner label:nth-child(5) {
+        transform: rotateX(90deg) translateZ(calc(var(--inner-size) / 2));
+        border: 1px solid black;
+        background-size: 100%;
+        background-image: url(./image/dice/五乔.jpg);
+    }
+
+    .main .inner label:nth-child(6) {
+        transform: rotateX(-90deg) translateZ(calc(var(--inner-size) / 2));
+        border: 1px solid black;
+        background-size: 100%;
+        background-image: url(./image/dice/六乔.jpg);
+    }
+
+
+    body {
+        background-color: hsl(252, 92%, 74%);
+        height: 3000px;
+
+    }
+
+    div.video_box {
+        height: 90vh;
+        background-color: wheat;
+    }
+
+    /* 过渡 */
+    div.trans {
+        height: 20vh;
+        background: linear-gradient(to bottom, wheat, hsl(252, 92%, 74%));
+    }
 </style>

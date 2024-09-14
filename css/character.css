@@ -18,7 +18,7 @@
 
 
 .character img {
-    float: right;
+    float: left;
     box-shadow: 10px 10px 2px 2px rgb(72, 68, 68);
     border: 2px solid black;
     aspect-ratio: 0.5;
@@ -26,9 +26,10 @@
     /* top: 80px;
     right: 100px;
     position: absolute; */
+    /* 绝对定位造成的盒子塌陷难以解决 */
 }
 
-.character p{
+.character p {
     text-align: center;
     font-size: larger;
     padding: 4px;
