@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/character.css">
     <link rel="stylesheet" href="./css/text-slide.css">
+    <link rel="stylesheet" href="./css/dice.css">
+    <script src="./js/audio.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JOJO的奇妙冒险·主页</title>
@@ -63,6 +65,7 @@
         </ul>
     </div>
     <div class="video_box">
+
         <video style="
             display: block;
             aspect-ratio: 1.769;
@@ -110,297 +113,83 @@
     <div class="trans">
 
     </div>
-    <!-- 用checkbox代替点击事件 -->
-    <input type="checkbox" id="inner-1" class="inner_act">
-    <input type="checkbox" id="inner-2" class="inner_act">
-    <input type="checkbox" id="inner-3" class="inner_act">
-    <input type="checkbox" id="inner-4" class="inner_act">
-    <input type="checkbox" id="inner-5" class="inner_act">
-    <input type="checkbox" id="inner-6" class="inner_act">
-    <!-- <audio autoplay></audio> -->
 
-    <audio controls class="audio" style="display: none;">
-        <source src="./audio/大乔.mp3" type="audio/mpeg" />
-    </audio>
+    <div class="audio_box">
+        <audio controls class="audio" style="display: none;">
+            <source src="./audio/大乔.mp3" type="audio/mpeg" />
+        </audio>
 
-    <audio controls class="audio" style="display: none;">
-        <source src="./audio/二乔.mp3" type="audio/mpeg" />
-    </audio>
+        <audio controls class="audio" style="display: none;">
+            <source src="./audio/二乔.mp3" type="audio/mpeg" />
+        </audio>
 
-    <audio controls class="audio" style="display: none;">
-        <source src="./audio/三乔.mp3" type="audio/mpeg" />
-    </audio>
+        <audio controls class="audio" style="display: none;">
+            <source src="./audio/三乔.mp3" type="audio/mpeg" />
+        </audio>
 
-    <audio controls class="audio" style="display: none;">
-        <source src="./audio/四乔.mp3" type="audio/mpeg" />
-    </audio>
+        <audio controls class="audio" style="display: none;">
+            <source src="./audio/四乔.mp3" type="audio/mpeg" />
+        </audio>
 
-    <audio controls class="audio" style="display: none;">
-        <source src="./audio/五乔.mp3" type="audio/mpeg" />
-    </audio>
-    <audio controls class="audio" style="display: none;">
-        <source src="./audio/六乔.mp3" type="audio/mpeg" />
-    </audio>
+        <audio controls class="audio" style="display: none;">
+            <source src="./audio/五乔.mp3" type="audio/mpeg" />
+        </audio>
+        <audio controls class="audio" style="display: none;">
+            <source src="./audio/六乔.mp3" type="audio/mpeg" />
+        </audio>
+    </div>
 
-    <div class="main">
+    <div class="dice">
+        <!-- 用checkbox代替点击事件 -->
+        <input type="checkbox" id="inner-1" class="inner_act">
+        <input type="checkbox" id="inner-2" class="inner_act">
+        <input type="checkbox" id="inner-3" class="inner_act">
+        <input type="checkbox" id="inner-4" class="inner_act">
+        <input type="checkbox" id="inner-5" class="inner_act">
+        <input type="checkbox" id="inner-6" class="inner_act">
+
         <div class="inner">
             <label for="inner-1">
-                <div>7</div>
+                <div></div>
             </label>
             <label for="inner-2">
-                <div>8</div>
+                <div></div>
             </label>
             <label for="inner-3">
-                <div>9</div>
+                <div></div>
             </label>
 
             <label for="inner-4">
-                <div>10</div>
+                <div></div>
             </label>
 
             <label for="inner-5">
-                <div>11</div>
+                <div></div>
             </label>
 
             <label for="inner-6">
-                <div>12</div>
+                <div></div>
             </label>
 
 
         </div>
 
         <div class="outer">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
+
     </div>
 </body>
 
 </html>
 
-<script>
-    let inner_photo = document.getElementsByClassName("inner_act")
-    let audio = document.getElementsByClassName("audio");
-    for (let i = 0; i < inner_photo.length; i++) {
-        inner_photo[i].addEventListener("change", (event) => {
-            if (event.target.checked) {
-                audio[i].load()
-                audio[i].play()
-            } else {
-                audio[i].pause()
-            }
-        })
-
-    }
-</script>
 
 <style>
-    @keyframes move {
-        from {
-            transform: rotateY(360deg) rotateX(0);
-        }
-
-        to {
-            transform: rotateY(50deg) rotateX(70deg);
-            ;
-        }
-    }
-
-
-    :root {
-        --outer-size: 600px;
-        --inner-size: 300px;
-    }
-
-    .main {
-        transform-style: preserve-3d;
-        width: var(--outer-size);
-        height: var(--outer-size);
-        margin: 0 auto;
-        position: relative;
-        animation: move 20s linear infinite;
-        transform-origin: center;
-    }
-
-
-    .main .outer div {
-        pointer-events: none;
-        
-    }
-
-
-    .main .outer {
-        transform-style: preserve-3d;
-        width: var(--outer-size);
-        height: var(--outer-size);
-        position: absolute;
-    }
-
-    .main .outer div {
-        width: var(--outer-size);
-        height: var(--outer-size);
-        background-color: rgba(112, 191, 197, 0.463);
-        /* background-image: url("image/dice/三乔.jpg"); */
-        position: absolute;
-        text-align: center;
-        line-height: var(--outer-size);
-        font-size: 5em;
-        border-radius: 25px;
-        border: solid rgba(255, 255, 255, 0.272) 3px;
-        transition: all 2s;
-        background-size: 0;
-    }
-
-    input[type="checkbox"] {
-        display: none;
-    }
-
-
-    #inner-1:checked~.main .outer div:nth-child(1) {
-        background-image: url(./image/dice/大乔-2.png);
-        opacity: 1;
-        background-size: 100%;
-    }
-
-
-    #inner-2:checked~.main .outer div:nth-child(2) {
-        background-size: 100%;
-        background-image: url(./image/dice/二乔-2.png);
-        opacity: 1;
-    }
-
-    #inner-3:checked~.main .outer div:nth-child(3) {
-        background-size: 100%;
-        background-image: url(./image/dice/三乔-2.png);
-        opacity: 1;
-    }
-
-    #inner-4:checked~.main .outer div:nth-child(4) {
-        background-size: 100%;
-        background-image: url(./image/dice/四乔-2.png);
-        opacity: 1;
-    }
-
-    #inner-5:checked~.main .outer div:nth-child(5) {
-        background-size: 100%;
-        background-image: url(./image/dice/五乔-2.png);
-        opacity: 1;
-    }
-
-    #inner-6:checked~.main .outer div:nth-child(6) {
-        background-size: 100%;
-        background-image: url(./image/dice/六乔-2.png);
-        opacity: 1;
-    }
-
-
-    .main .inner {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        transform-style: preserve-3d;
-        width: var(--inner-size);
-        height: var(--inner-size);
-    }
-
-
-    .main .inner label {
-        width: var(--inner-size);
-        height: var(--inner-size);
-        background-color: rgba(112, 191, 197, 0.463);
-        position: absolute;
-        font-size: 4em;
-        border-radius: 25px;
-        border: solid rgba(255, 255, 255, 0.272) 3px;
-    }
-
-    .main .inner div {
-        height: 100%;
-        width: 100%;
-        border: 1px solid black;
-        text-align: center;
-        line-height: var(--inner-size);
-    }
-
-    .main .outer>div:nth-child(1) {
-        transform: translateZ(calc(var(--outer-size) / 2));
-        
-        opacity: 0;
-    }
-
-    .main .outer>div:nth-child(2) {
-        transform: rotateY(90deg) translateZ(calc(var(--outer-size) / 2));
-        opacity: 0;
-    }
-
-    .main .outer>div:nth-child(3) {
-        transform: rotateY(180deg) translateZ(calc(var(--outer-size) / 2));
-        opacity: 0;
-    }
-
-    .main .outer>div:nth-child(4) {
-        transform: rotateY(-90deg) translateZ(calc(var(--outer-size) / 2));
-        opacity: 0;
-    }
-
-    .main .outer>div:nth-child(5) {
-        transform: rotateX(90deg) translateZ(calc(var(--outer-size) / 2));
-        opacity: 0;
-    }
-
-    .main .outer>div:nth-child(6) {
-        transform: rotateX(-90deg) translateZ(calc(var(--outer-size) / 2));
-        opacity: 0;
-    }
-
-    .main .inner label:nth-child(1) {
-        transform: translateZ(calc(var(--inner-size) / 2));
-        background-size: 100%;
-        border: solid black;
-        background-image: url(./image/dice/大乔.jpg);
-    }
-
-    .main .inner label:nth-child(2) {
-        transform: rotateY(90deg) translateZ(calc(var(--inner-size) / 2));
-        border: 1px solid black;
-        background-size: 100%;
-        background-image: url(./image/dice/二乔.jpg);
-    }
-
-    .main .inner label:nth-child(3) {
-        transform: rotateY(180deg) translateZ(calc(var(--inner-size) / 2));
-        border: 1px solid black;
-        background-size: 100%;
-        background-image: url(./image/dice/三乔.jpg);
-    }
-
-    .main .inner label:nth-child(4) {
-        transform: rotateY(-90deg) translateZ(calc(var(--inner-size) / 2));
-        background-size: 100%;
-        border: 1px solid black;
-        background-image: url(./image/dice/四乔.jpg);
-    }
-
-    .main .inner label:nth-child(5) {
-        transform: rotateX(90deg) translateZ(calc(var(--inner-size) / 2));
-        border: 1px solid black;
-        background-size: 100%;
-        background-image: url(./image/dice/五乔.jpg);
-    }
-
-    .main .inner label:nth-child(6) {
-        transform: rotateX(-90deg) translateZ(calc(var(--inner-size) / 2));
-        border: 1px solid black;
-        background-size: 100%;
-        background-image: url(./image/dice/六乔.jpg);
-    }
-
-
     body {
         background-color: hsl(252, 92%, 74%);
         height: 3000px;

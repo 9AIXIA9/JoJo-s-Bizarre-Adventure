@@ -1,0 +1,198 @@
+@keyframes move {
+    from {
+        transform: rotateY(360deg) rotateX(0);
+    }
+
+    to {
+        transform: rotateY(50deg) rotateX(70deg);
+        ;
+    }
+}
+
+
+:root {
+    --outer-size: 800px;
+    --inner-size: 600px;
+}
+
+.dice {
+    transform-style: preserve-3d;
+    width: var(--outer-size);
+    height: var(--outer-size);
+    margin: 0 auto;
+    position: relative;
+    animation: move 20s linear infinite;
+    transform-origin: center;
+}
+
+
+.dice .outer div {
+    pointer-events: none;
+}
+
+
+.dice .outer {
+    transform-style: preserve-3d;
+    width: var(--outer-size);
+    height: var(--outer-size);
+    position: absolute;
+}
+
+.dice .outer div {
+    width: var(--outer-size);
+    height: var(--outer-size);
+    background-color: rgba(112, 191, 197, 0.463);
+    position: absolute;
+    text-align: center;
+    line-height: var(--outer-size);
+    font-size: 5em;
+    border-radius: 25px;
+    border: solid rgba(255, 255, 255, 0.272) 3px;
+    transition: all 2s;
+    background-size: 0;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+
+#inner-1:checked~.outer div:nth-child(1) {
+    background-image: url(../image/dice/大乔-2.png);
+    opacity: 1;
+    background-size: 100%;
+}
+
+
+#inner-2:checked~.outer div:nth-child(2) {
+    background-size: 100%;
+    background-image: url(../image/dice/二乔-2.png);
+    opacity: 1;
+}
+
+#inner-3:checked~.outer div:nth-child(3) {
+    background-size: 100%;
+    background-image: url(../image/dice/三乔-2.png);
+    opacity: 1;
+}
+
+#inner-4:checked~.outer div:nth-child(4) {
+    background-size: 100%;
+    background-image: url(../image/dice/四乔-2.png);
+    opacity: 1;
+}
+
+#inner-5:checked~.outer div:nth-child(5) {
+    background-size: 100%;
+    background-image: url(../image/dice/五乔-2.png);
+    opacity: 1;
+}
+
+#inner-6:checked~.outer div:nth-child(6) {
+    background-size: 100%;
+    background-image: url(../image/dice/六乔-2.png);
+    opacity: 1;
+}
+
+
+.dice .inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+    width: var(--inner-size);
+    height: var(--inner-size);
+}
+
+
+.dice .inner label {
+    width: var(--inner-size);
+    height: var(--inner-size);
+    background-color: rgba(112, 191, 197, 0.463);
+    position: absolute;
+    font-size: 4em;
+    border-radius: 25px;
+    border: solid rgba(255, 255, 255, 0.272) 3px;
+}
+
+.dice .inner div {
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
+    line-height: var(--inner-size);
+}
+
+.dice .outer>div:nth-child(1) {
+    transform: translateZ(calc(var(--outer-size) / 2));
+
+    opacity: 0;
+}
+
+.dice .outer>div:nth-child(2) {
+    transform: rotateY(90deg) translateZ(calc(var(--outer-size) / 2));
+    opacity: 0;
+}
+
+.dice .outer>div:nth-child(3) {
+    transform: rotateY(180deg) translateZ(calc(var(--outer-size) / 2));
+    opacity: 0;
+}
+
+.dice .outer>div:nth-child(4) {
+    transform: rotateY(-90deg) translateZ(calc(var(--outer-size) / 2));
+    opacity: 0;
+}
+
+.dice .outer>div:nth-child(5) {
+    transform: rotateX(90deg) translateZ(calc(var(--outer-size) / 2));
+    opacity: 0;
+}
+
+.dice .outer>div:nth-child(6) {
+    transform: rotateX(-90deg) translateZ(calc(var(--outer-size) / 2));
+    opacity: 0;
+}
+
+.dice .inner label:nth-child(1) {
+    transform: translateZ(calc(var(--inner-size) / 2));
+    background-size: 100%;
+    border: solid black;
+    background-image: url(../image/dice/大乔.jpg);
+}
+
+.dice .inner label:nth-child(2) {
+    transform: rotateY(90deg) translateZ(calc(var(--inner-size) / 2));
+    border: 1px solid black;
+    background-size: 100%;
+    background-image: url(../image/dice/二乔.jpg);
+}
+
+.dice .inner label:nth-child(3) {
+    transform: rotateY(180deg) translateZ(calc(var(--inner-size) / 2));
+    border: 1px solid black;
+    background-size: 100%;
+    background-image: url(../image/dice/三乔.jpg);
+}
+
+.dice .inner label:nth-child(4) {
+    transform: rotateY(-90deg) translateZ(calc(var(--inner-size) / 2));
+    background-size: 100%;
+    border: 1px solid black;
+    background-image: url(../image/dice/四乔.jpg);
+}
+
+.dice .inner label:nth-child(5) {
+    transform: rotateX(90deg) translateZ(calc(var(--inner-size) / 2));
+    border: 1px solid black;
+    background-size: 100%;
+    background-image: url(../image/dice/五乔.jpg);
+}
+
+.dice .inner label:nth-child(6) {
+    transform: rotateX(-90deg) translateZ(calc(var(--inner-size) / 2));
+    border: 1px solid black;
+    background-size: 100%;
+    background-image: url(../image/dice/六乔.jpg);
+}
