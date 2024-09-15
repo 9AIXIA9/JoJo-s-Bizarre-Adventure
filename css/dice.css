@@ -1,11 +1,38 @@
-@keyframes move {
-    from {
-        transform: rotateY(360deg) rotateX(0);
+@keyframes dice_rotate {
+
+    /* Z往顺时针 X往纵深方向 Y往左  */
+    0% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(0);
     }
 
-    to {
-        transform: rotateY(50deg) rotateX(70deg);
-        ;
+    12.5% {
+        transform: rotateX(270deg) rotateY(360deg) rotateZ(15deg);
+
+    }
+
+    37.5% {
+        transform: rotateX(180deg) rotateY(360deg) rotateZ(180deg);
+    }
+
+    50% {
+        transform: rotateX(150deg) rotateY(270deg) rotateZ(150deg);
+    }
+
+    67.5% {
+        transform: rotateX(90deg) rotateY(180deg) rotateZ(90deg);
+    }
+    75% {
+        transform: rotateX(75deg) rotateY(90deg) rotateZ(40deg);
+    }
+    87.5%{
+        transform: rotateX(75deg) rotateY(20deg) rotateZ(40deg);
+
+    }
+    90%{
+        transform: rotateX(20deg) rotateY(50deg) rotateZ(-60deg);
+    }
+    100% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     }
 }
 
@@ -21,7 +48,7 @@
     height: var(--outer-size);
     margin: 0 auto;
     position: relative;
-    animation: move 20s linear infinite;
+    animation: dice_rotate 20s linear infinite;
     transform-origin: center;
 }
 
@@ -39,17 +66,38 @@
 }
 
 .dice .outer div {
+    height: 100%;
+    width: 100%;
     width: var(--outer-size);
     height: var(--outer-size);
-    background-color: rgba(112, 191, 197, 0.463);
     position: absolute;
-    text-align: center;
-    line-height: var(--outer-size);
-    font-size: 5em;
-    border-radius: 25px;
-    border: solid rgba(255, 255, 255, 0.272) 3px;
+    border: solid rgb(0, 0, 0) 5px;
+    border-radius: 30px;
     transition: all 2s;
+    box-sizing: border-box;
+    /* 点击取消效果 */
+    background: #ffffff;
+    /* 从无限中突出的效果 */
     background-size: 0;
+}
+
+.dice .inner div {
+    height: 100%;
+    width: 100%;
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 40px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.dice .inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+    width: var(--inner-size);
+    height: var(--inner-size);
 }
 
 input[type="checkbox"] {
@@ -58,7 +106,7 @@ input[type="checkbox"] {
 
 
 #inner-1:checked~.outer div:nth-child(1) {
-    background-image: url(../image/dice/大乔-2.png);
+    background-image: url(../image/dice/大乔-2.jpg);
     opacity: 1;
     background-size: 100%;
 }
@@ -66,13 +114,13 @@ input[type="checkbox"] {
 
 #inner-2:checked~.outer div:nth-child(2) {
     background-size: 100%;
-    background-image: url(../image/dice/二乔-2.png);
+    background-image: url(../image/dice/二乔-2.jpg);
     opacity: 1;
 }
 
 #inner-3:checked~.outer div:nth-child(3) {
     background-size: 100%;
-    background-image: url(../image/dice/三乔-2.png);
+    background-image: url(../image/dice/三乔-2.jpg);
     opacity: 1;
 }
 
@@ -90,20 +138,10 @@ input[type="checkbox"] {
 
 #inner-6:checked~.outer div:nth-child(6) {
     background-size: 100%;
-    background-image: url(../image/dice/六乔-2.png);
+    background-image: url(../image/dice/六乔-2.jpg);
     opacity: 1;
 }
 
-
-.dice .inner {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    transform-style: preserve-3d;
-    width: var(--inner-size);
-    height: var(--inner-size);
-}
 
 
 .dice .inner label {
@@ -112,17 +150,8 @@ input[type="checkbox"] {
     background-color: rgba(112, 191, 197, 0.463);
     position: absolute;
     font-size: 4em;
-    border-radius: 25px;
-    border: solid rgba(255, 255, 255, 0.272) 3px;
 }
 
-.dice .inner div {
-    height: 100%;
-    width: 100%;
-    border: 1px solid black;
-    text-align: center;
-    line-height: var(--inner-size);
-}
 
 .dice .outer>div:nth-child(1) {
     transform: translateZ(calc(var(--outer-size) / 2));

@@ -5,7 +5,7 @@
 <head>
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/character.css">
-    <link rel="stylesheet" href="./css/text-slide.css">
+    <link rel="stylesheet" href="./css/saying-slide.css">
     <link rel="stylesheet" href="./css/dice.css">
     <script src="./js/audio.js"></script>
     <meta charset="UTF-8">
@@ -109,11 +109,9 @@
             </div>
         </ul>
     </div>
-
     <div class="trans">
 
     </div>
-
     <div class="audio_box">
         <audio controls class="audio" style="display: none;">
             <source src="./audio/大乔.mp3" type="audio/mpeg" />
@@ -138,7 +136,11 @@
             <source src="./audio/六乔.mp3" type="audio/mpeg" />
         </audio>
     </div>
-
+    
+    <div class="JOJO_font place_hold">
+        <h1>JOJO的奇妙盒子</h1>
+        <h2>尝试点击人物图片</h2>
+    </div>
     <div class="dice">
         <!-- 用checkbox代替点击事件 -->
         <input type="checkbox" id="inner-1" class="inner_act">
@@ -193,7 +195,7 @@
     body {
         background-color: hsl(252, 92%, 74%);
         height: 3000px;
-
+        overflow-x: hidden;
     }
 
     div.video_box {
@@ -203,7 +205,13 @@
 
     /* 过渡 */
     div.trans {
-        height: 20vh;
+        height: 30vh;
         background: linear-gradient(to bottom, wheat, hsl(252, 92%, 74%));
+    }
+    div.place_hold{
+        margin: 300px auto;
+    }
+    .place_hold h1{
+        padding-bottom: 20px;
     }
 </style>
