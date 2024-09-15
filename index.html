@@ -136,7 +136,57 @@
             <source src="./audio/六乔.mp3" type="audio/mpeg" />
         </audio>
     </div>
-    
+    <div class="info">
+        <h1>欢迎来到JOJO的奇妙世界!</h1>
+        <div id="part_1">
+            <div class="img_box">
+                <img src="./image/index_image/7-1.jpg" alt="第七部漫画封面-1">
+            </div>
+            <p>
+                《JOJO的奇妙冒险》是由日本漫画家荒木·飞吕彦所创作的漫画作品,简称JOJO
+                其独特的画风，令人惊叹的剧情，这么多年以来几乎不会让人厌倦，可谓是青少年漫画的必看作
+                曾在2006年日本文化厅媒体艺术节中评选为第二佳漫画,现连载已有九部作品
+                正如荒木先生本人所说,JOJO的主题是生存及对命运的抗争
+                在它的故事中展现了人类的努力与伟大,更描绘了他们之间的友谊和感情
+                JOJO家族的八代人都拥有着特殊的能力
+                一代和二代用的是“波纹气功”
+                后续引入了“替身”的概念
+                替身实质是把精神力量加以实体化、具象化
+                第三部时开始使用替身，只有老年乔瑟夫同时使用波纹和替身
+                在第七部中平行世界里出现了对应波纹的回旋
+                同时也存在替身这一能力
+            </p>
+        </div>
+        <div class="trans"></div>
+        <div id="part_2">
+            <div class="img_box">
+                <img src="./image/index_image/8-1.jpg" alt="">
+
+            </div>
+            <p>
+                JOJO的故事横跨100多年,传承了整整八代人
+                故事是从19世纪的一个英国庄园开始的
+                从故事中可看出,JOJO每一代故事发生的背景舞台是不同的
+                荒木对这些舞台的描绘也是十分具有真实感的
+                初代的英伦乡村庄园，中世纪古堡,第2代的三四十年代美国
+                都是令人信服且别具特色的
+                第三代所经过的众多国家和城市
+                荒木对这些地方的风土人情都作了间接而真实的描绘
+                而第四代是以荒木老师的家乡宫城县做背景参考
+                塑造了一个真实无比的都市“杜王町”
+                第五代以荒木老师最喜欢的意大利做背景
+                描绘了许多艺术与古迹的风采
+                第六代主要部分以美国监狱为背景
+                监狱压抑的环境让人屏息,却又充满刺激
+                第七代以1890年的美国为背景
+                描述横越美国的故事
+                表现出当代特有的西部牛仔气氛
+                第八代回到了第四部《不灭钻石》的舞台杜王町
+                虽然背景一样，但情节却截然不同
+            </p>
+        </div>
+
+    </div>
     <div class="JOJO_font place_hold">
         <h1>JOJO的奇妙盒子</h1>
         <h2>尝试点击人物图片</h2>
@@ -192,10 +242,19 @@
 
 
 <style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    html {
+        width: 100vw;
+
+    }
+
     body {
         background-color: hsl(252, 92%, 74%);
-        height: 3000px;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
     }
 
     div.video_box {
@@ -208,10 +267,80 @@
         height: 30vh;
         background: linear-gradient(to bottom, wheat, hsl(252, 92%, 74%));
     }
-    div.place_hold{
+
+
+    div.place_hold {
         margin: 300px auto;
     }
-    .place_hold h1{
-        padding-bottom: 20px;
+
+    div.info {
+        width: 100%;
+        overflow: hidden;
+        margin: 0;
+        background-color: red;
+
+    }
+
+    #part_1 {
+        height: 120vh;
+    }
+
+    #part_1 .img_box {
+        height: 120vh;
+    }
+
+    #part_1~.trans {
+        height: 30vh;
+        background: linear-gradient(to bottom, hsl(252, 92%, 74%), wheat);
+    }
+
+    #part_2 {
+        height: 120vh;
+        background-color: wheat;
+    }
+
+    #part_2 .img_box {
+        height: 120vh;
+    }
+
+    .info h1 {
+        color: white;
+        -webkit-text-stroke-color: black;
+        -webkit-text-stroke-width: 1px;
+        font-style: italic;
+        text-align: center;
+        letter-spacing: 4px;
+        line-height: 3vh;
+        margin: 40px auto;
+    }
+
+    .img_box {
+        margin-top: 10vh;
+        float: left;
+        box-sizing: border-box;
+    }
+
+    .img_box img {
+        margin-left: 20px;
+        box-shadow: 10px 10px 2px 2px rgb(72, 68, 68);
+        border: 3px solid black;
+        aspect-ratio: 0.5;
+        width: 350px;
+    }
+
+    .info p {
+        font-size: x-large;
+        font-weight: bold;
+        line-height: 60px;
+        display: block;
+        text-align: left;
+        white-space: pre;
+    }
+
+    .info b {
+        color: rgba(0, 0, 0, 0.479);
+        text-align: left;
+        display: block;
+
     }
 </style>
