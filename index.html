@@ -158,41 +158,59 @@
             </p>
         </div>
         <div class="trans"></div>
+        <h1>JOJO故事发生背景</h1>
         <div id="part_2">
             <div class="img_box">
-                <img src="./image/index_image/8-1.jpg" alt="">
+                <img src="./image/index_image/8-1.jpg" alt="第八部漫画封面-1">
 
             </div>
             <p>
-                JOJO的故事横跨100多年,传承了整整八代人
-                故事是从19世纪的一个英国庄园开始的
-                从故事中可看出,JOJO每一代故事发生的背景舞台是不同的
-                荒木对这些舞台的描绘也是十分具有真实感的
-                初代的英伦乡村庄园，中世纪古堡,第2代的三四十年代美国
-                都是令人信服且别具特色的
+                JOJO每一代故事发生的背景舞台是不同的
+                初代的十九世纪英伦乡村庄园和中世纪古堡
+                第二代的三四十年代美国
                 第三代所经过的众多国家和城市
                 荒木对这些地方的风土人情都作了间接而真实的描绘
                 而第四代是以荒木老师的家乡宫城县做背景参考
-                塑造了一个真实无比的都市“杜王町”
-                第五代以荒木老师最喜欢的意大利做背景
-                描绘了许多艺术与古迹的风采
-                第六代主要部分以美国监狱为背景
-                监狱压抑的环境让人屏息,却又充满刺激
+                塑造了一个民风淳朴的小镇“杜王町”
+                第五代以荒木最喜欢的意大利为舞台
+                充斥着古老而又迷人的独特风味
+                第六代的故事主要以美国监狱为背景
+                监狱压抑的环境让人窒息却又刺激
                 第七代以1890年的美国为背景
-                描述横越美国的故事
-                表现出当代特有的西部牛仔气氛
+                描写的是人类史上第一场骑乘马匹横越北美大陆的比赛
                 第八代回到了第四部《不灭钻石》的舞台杜王町
                 虽然背景一样，但情节却截然不同
             </p>
-            <div class="trans"></div>
-
+        </div>
+        <div class="trans"></div>
+        <h1>JOJO的精神内核</h1>
+        <div id="part_3">
+            <div class="img_box">
+                <img src="./image/index_image/7-2.jpg" alt="第七部漫画封面-2">
+            </div>
+            <p>
+                在JOJO系列的动漫里,无论是哪一部
+                都充斥着热血和激情,都刻画着命运的无奈和可怕
+                但同时也塑造了人类英勇抗争的风采
+                通过角色的行为处事
+                向我们展现了“黄金精神”
+                让人类得以存活前进的伟大精神
+                勇敢、善良与正义
+                诠释了人类的伟大和光芒
+                “黄金精神”不可缺
+                人类的勇敢、善良和正义
+                让他们发光发亮
+                更让JOJO系列动漫永恒不落后
+            </p>
         </div>
 
     </div>
-    <div class="JOJO_font place_hold">
+    <div class="trans" id="trans_2"></div>
+    <div class="JOJO_font">
         <h1>JOJO的奇妙盒子</h1>
         <h2>尝试点击人物图片</h2>
     </div>
+    <div class="place_hold"> </div>
     <div class="dice">
         <!-- 用checkbox代替点击事件 -->
         <input type="checkbox" id="inner-1" class="inner_act">
@@ -255,13 +273,12 @@
     }
 
     body {
-        background-color: hsl(252, 92%, 74%);
-        /* overflow-x: hidden; */
+        background-color: wheat;
+        overflow-x: hidden;
     }
 
     div.video_box {
         height: 90vh;
-        background-color: wheat;
     }
 
     /* 过渡 */
@@ -270,20 +287,19 @@
         background: linear-gradient(to bottom, wheat, hsl(252, 92%, 74%));
     }
 
-
-    div.place_hold {
-        margin: 300px auto;
+    #trans_2 {
+        background: linear-gradient(to top, wheat, hsl(252, 92%, 74%));
     }
 
+
     div.info {
-        width: 100%;
         overflow: hidden;
         margin: 0;
-
     }
 
     #part_1 {
         height: 120vh;
+        background-color: hsl(252, 92%, 74%);
     }
 
     #part_1 .img_box {
@@ -295,6 +311,11 @@
         background: linear-gradient(to bottom, hsl(252, 92%, 74%), wheat);
     }
 
+    #part_1~.trans~h1 {
+        background-color: wheat;
+        margin: 0;
+    }
+
     #part_2 {
         height: 120vh;
         background-color: wheat;
@@ -304,7 +325,28 @@
         height: 120vh;
     }
 
+    #part_2~.trans~h1 {
+        background-color: hsl(252, 92%, 74%);
+        margin: 0;
+    }
+
+    #part_2~.trans {
+        height: 30vh;
+        background: linear-gradient(to top, hsl(252, 92%, 74%), wheat);
+    }
+
+
+    #part_3 {
+        height: 100vh;
+        background-color: hsl(252, 92%, 74%);
+    }
+
+    #part_3 .img_box {
+        height: 100vh;
+    }
+
     .info h1 {
+        background-color: hsl(252, 92%, 74%);
         color: white;
         -webkit-text-stroke-color: black;
         -webkit-text-stroke-width: 1px;
@@ -312,11 +354,9 @@
         text-align: center;
         letter-spacing: 4px;
         line-height: 3vh;
-        margin: 40px auto;
     }
 
     .img_box {
-        margin-top: 10vh;
         float: left;
         box-sizing: border-box;
     }
@@ -337,11 +377,7 @@
         text-align: left;
         white-space: pre;
     }
-
-    .info b {
-        color: rgba(0, 0, 0, 0.479);
-        text-align: left;
-        display: block;
-
+    div.place_hold{
+        height: 30vh;
     }
 </style>

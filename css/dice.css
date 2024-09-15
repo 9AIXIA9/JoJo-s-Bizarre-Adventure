@@ -46,7 +46,7 @@ input[type="checkbox"] {
     height: var(--outer-size);
     position: absolute;
     border: solid rgb(0, 0, 0) 5px;
-    border-radius: 30px;
+    /* border-radius: 30px; */
     transition: all 2s;
     box-sizing: border-box;
     /* 点击取消效果 */
