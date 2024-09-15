@@ -88,7 +88,6 @@ input[type="checkbox"] {
 }
 
 
-
 .dice .outer>div:nth-child(1) {
     transform: translateZ(calc(var(--outer-size) / 2));
     opacity: 0;
