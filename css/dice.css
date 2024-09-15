@@ -32,10 +32,6 @@ input[type="checkbox"] {
     margin-bottom: 400px;
 }
 
-
-
-
-
 .dice .outer {
     transform-style: preserve-3d;
     width: var(--outer-size);
