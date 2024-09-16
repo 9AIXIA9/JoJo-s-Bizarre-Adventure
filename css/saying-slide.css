@@ -1,6 +1,6 @@
 :root {
     --saying-slide-height: 40px;
-    --saying-num: 7;
+    --saying-num: 8;
     --saying-time: 20s;
     --saying-see-time: calc(var(--saying-time) / var(--saying-num));
 }

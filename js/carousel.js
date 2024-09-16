@@ -1,13 +1,16 @@
 window.onload = function () {
-    var images = document.getElementsByClassName("carousel_image");
-    var circles = document.getElementsByClassName("carousel_circle");
-    var leftButton = document.querySelector(".carousel_button_left");
-    var rightButton = document.querySelector(".carousel_button_right");
-    var carousel_box = document.querySelector(".carousel");
-    var index = 0;
-    var timer = null;
+    const images = document.getElementsByClassName("carousel_image");
+    const circles = document.getElementsByClassName("carousel_circle");
+    const leftButton = document.querySelector(".carousel_button_left");
+    const rightButton = document.querySelector(".carousel_button_right");
+    const carouselBox = document.querySelector(".carousel");
+    let index = 0;
+    let timer = null;
+    const normalInterval = 1500;
+    const hoverInterval = 3000;
 
-    var clearclass = function () {
+    // 清除所有图片和圆点的激活状态
+    const clearClass = function () {
         for (let i = 0; i < images.length; i++) {
             images[i].classList.remove("active");
             circles[i].classList.remove("circle_white");
@@ -15,46 +18,67 @@ window.onload = function () {
         }
     }
 
-    function move() {
-        clearclass();
+    // 根据当前index设置对应的图片和圆点
+    const move = function () {
+        clearClass();
         images[index].classList.add("active");
         circles[index].classList.add("circle_white");
     }
 
-    rightButton.onclick = function () {
+    // 向右滚动的函数
+    const moveRight = function () {
         index = (index + 1) % images.length;
         move();
+    }
+
+    // 向左滚动的函数
+    const moveLeft = function () {
+        index = (index - 1 + images.length) % images.length;
+        move();
+    }
+
+    // 绑定按钮点击事件
+    rightButton.onclick = function () {
+        moveRight();
     };
 
     leftButton.onclick = function () {
-        index = (index - 1 + images.length) % images.length;
-        move();
+        moveLeft();
     };
 
-    timer = setInterval(function () {
-        rightButton.onclick();
-    }, 1500);
+    // 自动播放功能
+    const startAutoPlay = function (interval) {
+        timer = setInterval(moveRight, interval);
+    }
 
-    for (var i = 0; i < circles.length; i++) {
+    // 停止自动播放
+    const stopAutoPlay = function () {
+        clearInterval(timer);
+    }
+
+    // 初始化自动播放
+    startAutoPlay(normalInterval);
+
+    // 为圆点绑定点击事件
+    for (let i = 0; i < circles.length; i++) {
         circles[i].addEventListener("click", function () {
-            index = this.getAttribute("num");
+            index = parseInt(this.getAttribute("num"));
             move();
-        })
+        });
     }
 
-    carousel_box.onmouseover = function () {
-        clearInterval(timer);
-        timer = setInterval(function () {
-            rightButton.onclick();
-        }, 3000);
+    // 当鼠标移入轮播区域时，延长播放间隔
+    carouselBox.onmouseover = function () {
+        stopAutoPlay();
+        startAutoPlay(hoverInterval);
     }
 
-    carousel_box.onmouseleave = function () {
-        clearInterval(timer);
-        timer = setInterval(function () {
-            rightButton.onclick();
-        }, 1500);
+    // 当鼠标移出轮播区域时，恢复原来的播放间隔
+    carouselBox.onmouseleave = function () {
+        stopAutoPlay();
+        startAutoPlay(normalInterval);
     }
 
+    // 初始化轮播图的显示
     move();
 }
