@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="shortcut icon" href="./image/logo_title.png">
+<link rel="shortcut icon" href="../image/logo_title.png">
 
 <head>
-    <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./css/JOJO_font.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/character.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JOJO-乔纳森·乔斯达</title>
+    <title>JOJO的奇妙冒险·排名</title>
 </head>
 
 <body>
+
     <div class="nav">
         <ul class="nav_section">
             <div class="header">
@@ -26,7 +27,7 @@
                     </svg>
                     关于
                 </a></li>
-            <li class="nav_section"><a href="./rank.html">
+            <li class="nav_section nav_active"><a href="./rank.html">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                         <path fill="#000000"
                             d="M11 10h2c1.414 0 2.121 0 2.56.44c.44.439.44 1.146.44 2.56v6c0-1.414 0-2.121.44-2.56C16.878 16 17.585 16 19 16s2.121 0 2.56.44c.44.439.44 1.146.44 2.56v3H2c0-1.414 0-2.121.44-2.56C2.878 19 3.585 19 5 19s2.121 0 2.56.44C8 19.878 8 20.585 8 22v-9c0-1.414 0-2.121.44-2.56C8.878 10 9.585 10 11 10m.146-6.977C11.526 2.34 11.716 2 12 2s.474.34.854 1.023l.098.176c.108.194.162.29.246.354c.085.064.19.088.4.135l.19.044c.738.167 1.107.25 1.195.532s-.164.577-.667 1.165l-.13.152c-.143.167-.215.25-.247.354s-.021.215 0 .438l.02.203c.076.785.114 1.178-.115 1.352c-.23.175-.576.015-1.267-.303l-.178-.082c-.197-.09-.295-.136-.399-.136s-.202.046-.399.136l-.178.082c-.691.318-1.037.478-1.267.303c-.23-.174-.191-.567-.115-1.352l.02-.203c.021-.223.032-.334 0-.438s-.104-.187-.247-.354l-.13-.152c-.503-.588-.755-.882-.667-1.165c.088-.282.457-.365 1.195-.532l.19-.044c.21-.047.315-.07.4-.135c.084-.064.138-.16.246-.354z" />
@@ -40,7 +41,7 @@
                     </svg>
                     BOSS
                 </a></li>
-            <li id="JOJO" class="nav_section nav_active"><a href="./JOJO.html">
+            <li id="JOJO" class="nav_section"><a href="./JOJO.html">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-star-fill" viewBox="0 0 16 16">
                         <path
@@ -61,48 +62,156 @@
                 </a></li>
         </ul>
     </div>
-    <div class="info">
-        <div class="character">
-            <h1>乔纳森·乔斯达</h1>
-            <div class="img_box">
-                <img src="./image/JOJO/大乔.png" alt="乔纳森·乔斯达">
-            </div>
-            <p>
-                家族历史悠久的英国贵族乔斯达家的嫡男
-                外号为乔乔(JOJO)
-                拥有作为贵族的骄傲,率直而绅士的性格
-                与迪奥相遇的时候抱有不擅长应对对方的意识
-                之后把他作为自己的竞争对手共同成长
-                作为初代JOJO
-                父亲为乔治·乔斯达爵士,母亲为玛丽·乔斯达
-                后为报父仇追击迪奥·布兰度
-                得到威廉·A·齐贝林的帮助
-                并跟其习会了波纹气功
-            </p>
+
+    <div class="carousel">
+        <link rel="stylesheet" href="../css/carousel.css">
+
+        <script src="../js/carousel.js"></script>
+
+        <ul class="carousel_images">
+            <li class="carousel_image">
+                <a href="./JOJO.html"><img src="../image/carousel-1.png"></a>
+            </li>
+            <li class="carousel_image">
+                <a href="./JOJO.html"><img src="../image/carousel-2.png"></a>
+            </li>
+            <li class="carousel_image">
+                <a href="./JOJO.html"><img src="../image/carousel-3.png"></a>
+            </li>
+        </ul>
+        <div class="carousel_button_left">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+            </svg>
         </div>
+        <div class="carousel_button_right">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+        </div>
+        <!-- 用于形成图片下面的小圈  -->
+        <ul class="carousel_circles">
+            <li class="carousel_circle"></li>
+            <li class="carousel_circle"></li>
+            <li class="carousel_circle"></li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="rank-box">
+            <table>
+                <caption>
+                    Front-end web developer course 2021
+                </caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Person</th>
+                        <th scope="col">Most interest in</th>
+                        <th scope="col">Age</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Chris</th>
+                        <td>HTML tables</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Dennis</th>
+                        <td>Web accessibility</td>
+                        <td>45</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Sarah</th>
+                        <td>JavaScript frameworks</td>
+                        <td>29</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Karen</th>
+                        <td>Web performance</td>
+                        <td>36</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row" colspan="2">Average age</th>
+                        <td>33</td>
+                    </tr>
+                </tfoot>
+            </table>
 
-
+        </div>
     </div>
 </body>
 
 </html>
 
-
 <style>
     * {
-        margin: 0;
         padding: 0;
+        margin: 0;
     }
 
     body {
-        background-color: #74b9ff;
-        height: 100vh;
+        /* background-color: #232946; */
+        background-color: hsl(252, 92%, 74%);
+        /* background: linear-gradient(#00ffff6a, #e3f6f5, #00ffff6a); */
     }
 
+
     .main {
-        overflow: hidden;
+        clear: both;
         width: 100%;
         height: 1000px;
+    }
 
+    div.rank-box {
+        margin: auto;
+        margin-top: 500px;
+        background-color: #d4d8f0;
+    }
+
+    table {
+        border-collapse: collapse;
+        border: 4px solid rgb(0, 0, 0);
+        font-family: sans-serif;
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    caption {
+        caption-side: bottom;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    thead,
+    tfoot {
+        background-color: rgb(228 240 245);
+    }
+
+    th,
+    td {
+        border: 1px solid rgb(160 160 160);
+        padding: 8px 10px;
+    }
+
+    td:last-of-type {
+        text-align: center;
+    }
+
+    tbody>tr:nth-of-type(even) {
+        background-color: rgb(237 238 242);
+    }
+
+    tfoot th {
+        text-align: right;
+    }
+
+    tfoot td {
+        font-weight: bold;
     }
 </style>

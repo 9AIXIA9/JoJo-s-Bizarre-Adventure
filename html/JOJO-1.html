@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="shortcut icon" href="./image/logo_title.png">
+<link rel="shortcut icon" href="../image/logo_title.png">
 
 <head>
-    <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./css/character.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/JOJO_font.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JOJO的奇妙冒险·关于</title>
+    <title>JOJO-乔纳森·乔斯达</title>
 </head>
 
 <body>
-    
-
     <div class="nav">
         <ul class="nav_section">
             <div class="header">
                 <h1>JoJo's Bizarre Adventure</h1>
             </div>
-            <li class="nav_section nav_active"><a href="./about.html">
+            <li class="nav_section"><a href="./about.html">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-bookmarks-fill" viewBox="0 0 16 16">
                         <path
@@ -42,7 +40,7 @@
                     </svg>
                     BOSS
                 </a></li>
-            <li id="JOJO" class="nav_section"><a href="./JOJO.html">
+            <li id="JOJO" class="nav_section nav_active"><a href="./JOJO.html">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-star-fill" viewBox="0 0 16 16">
                         <path
@@ -63,32 +61,46 @@
                 </a></li>
         </ul>
     </div>
-
-    <div class="main">
+    <div class="info">
         <div class="character">
-            <h1 class="JOJO_font">关于本网站的信息</h1>
-            <a href="./JOJO-3.html">
-                <img src="./image/竖.jpg" alt="杰洛">
-            </a>
+            <h1>乔纳森·乔斯达</h1>
+            <div class="img_box">
+                <img src="../image/JOJO/大乔.png" alt="乔纳森·乔斯达">
+            </div>
             <p>
-                关于本网站的信息······
+                家族历史悠久的英国贵族乔斯达家的嫡男
+                外号为乔乔(JOJO)
+                拥有作为贵族的骄傲,率直而绅士的性格
+                与迪奥相遇的时候抱有不擅长应对对方的意识
+                之后把他作为自己的竞争对手共同成长
+                作为初代JOJO
+                父亲为乔治·乔斯达爵士,母亲为玛丽·乔斯达
+                后为报父仇追击迪奥·布兰度
+                得到威廉·A·齐贝林的帮助
+                并跟其习会了波纹气功
             </p>
-
         </div>
+
+
     </div>
 </body>
 
 </html>
 
+
 <style>
-    body {
-        background-color: hsl(252, 92%, 74%);
-        /* background: linear-gradient(#00ffff6a, #e3f6f5, #00ffff6a); */
+    * {
+        margin: 0;
+        padding: 0;
     }
 
+    body {
+        background-color: #74b9ff;
+        height: 100vh;
+    }
 
     .main {
-        clear: both;
+        overflow: hidden;
         width: 100%;
         height: 1000px;
 
