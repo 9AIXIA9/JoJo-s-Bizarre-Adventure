@@ -63,88 +63,74 @@
         </ul>
     </div>
 
-    <div class="carousel">
-        <link rel="stylesheet" href="../css/carousel.css">
+    <div class="rank-box">
+        <table>
+            <caption>
+                数据来源于网络
+            </caption>
+            <thead>
+                <tr>
+                    <th scope="col">主角名</th>
+                    <th scope="col">替身名称</th>
+                    <th scope="col">替身能力</th>
+                    <th scope="col">票数</th>
 
-        <script src="../js/carousel.js"></script>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">空条·承太郎</th>
+                    <td>白金之星</td>
+                    <td>极高精密度,暂停时间</td>
+                    <td>8205</td>
+                </tr>
+                <tr>
+                    <th scope="row">乔瑟夫 ·乔斯达</th>
+                    <td>隐者之紫</td>
+                    <td>波纹,念写,释放紫色藤蔓</td>
+                    <td>4993</td>
+                </tr>
+                <tr>
+                    <th scope="row">乔鲁诺·乔巴纳</th>
+                    <td>黄金体验</td>
+                    <td>将非生物变成生物</td>
+                    <td>2820</td>
+                </tr>
+                <tr>
+                    <th scope="row">乔尼·乔斯达</th>
+                    <td>牙</td>
+                    <td>旋转指甲,制造爪弹</td>
+                    <td>1589</td>
+                </tr>
+                <tr>
+                    <th scope="row">东方·仗助</th>
+                    <td>疯狂钻石</td>
+                    <td>修复一切被破坏的物体</td>
+                    <td>1399</td>
+                </tr>
+                <tr>
+                    <th scope="row">乔纳森·乔斯达</th>
+                    <td>无</td>
+                    <td>自身能力:波纹</td>
+                    <td>1589</td>
+                </tr>
 
-        <ul class="carousel_images">
-            <li class="carousel_image">
-                <a href="./JOJO.html"><img src="../image/carousel-1.png"></a>
-            </li>
-            <li class="carousel_image">
-                <a href="./JOJO.html"><img src="../image/carousel-2.png"></a>
-            </li>
-            <li class="carousel_image">
-                <a href="./JOJO.html"><img src="../image/carousel-3.png"></a>
-            </li>
-        </ul>
-        <div class="carousel_button_left">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-chevron-left" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
-            </svg>
-        </div>
-        <div class="carousel_button_right">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-chevron-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-            </svg>
-        </div>
-        <!-- 用于形成图片下面的小圈  -->
-        <ul class="carousel_circles">
-            <li class="carousel_circle"></li>
-            <li class="carousel_circle"></li>
-            <li class="carousel_circle"></li>
-        </ul>
+                <tr>
+                    <th scope="row">空条·徐伦</th>
+                    <td>石之自由</td>
+                    <td>可以将自身变换成丝线</td>
+                    <td>1016</td>
+                </tr>
+                <tr>
+                    <th scope="row">东方·定助</th>
+                    <td>软又湿</td>
+                    <td>释放出气泡,气泡炸裂能造成爆炸或者夺走某样东西</td>
+                    <td>546</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <div class="main">
-        <div class="rank-box">
-            <table>
-                <caption>
-                    Front-end web developer course 2021
-                </caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Person</th>
-                        <th scope="col">Most interest in</th>
-                        <th scope="col">Age</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">Chris</th>
-                        <td>HTML tables</td>
-                        <td>22</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Dennis</th>
-                        <td>Web accessibility</td>
-                        <td>45</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Sarah</th>
-                        <td>JavaScript frameworks</td>
-                        <td>29</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Karen</th>
-                        <td>Web performance</td>
-                        <td>36</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <th scope="row" colspan="2">Average age</th>
-                        <td>33</td>
-                    </tr>
-                </tfoot>
-            </table>
 
-        </div>
-    </div>
 </body>
 
 </html>
@@ -157,25 +143,19 @@
 
     body {
         /* background-color: #232946; */
-        background-color: hsl(252, 92%, 74%);
+        background-color: #d4d8f0;
         /* background: linear-gradient(#00ffff6a, #e3f6f5, #00ffff6a); */
     }
 
 
-    .main {
-        clear: both;
-        width: 100%;
-        height: 1000px;
-    }
-
     div.rank-box {
-        margin: auto;
-        margin-top: 500px;
         background-color: #d4d8f0;
     }
 
     table {
         border-collapse: collapse;
+        width: 100vw;
+        height: 80vh;
         border: 4px solid rgb(0, 0, 0);
         font-family: sans-serif;
         font-size: 2rem;
