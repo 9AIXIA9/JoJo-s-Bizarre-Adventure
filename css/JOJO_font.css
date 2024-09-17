@@ -20,7 +20,7 @@ div.trans {
 }
 /* 信息 */
 div.info {
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .part:nth-child(odd) {
