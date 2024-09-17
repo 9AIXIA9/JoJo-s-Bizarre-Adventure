@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.JOJO_font {
+    /* 文字 */
+    color: white;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+    font-style: italic;
+    text-align: center;
+    letter-spacing: 4px;
+    line-height: 3vh;
+}
+
+/* 过渡 */
+div.trans {
+    background: linear-gradient(to bottom, wheat, hsl(252, 92%, 74%));
+    height: 30vh;
+}
+/* 信息 */
+div.info {
+    overflow: hidden;
+}
+
+.part:nth-child(odd) {
+    background-color: hsl(252, 92%, 74%);
+}
+
+.part:nth-child(odd) .trans {
+    background: linear-gradient(to top, wheat, hsl(252, 92%, 74%));
+}
+
+.part:nth-child(even) {
+    background-color: wheat;
+}
+
+
+.info h1 {
+    background-color: transparent;
+    color: white;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+    font-style: italic;
+    text-align: center;
+    letter-spacing: 4px;
+    line-height: 3vh;
+}
+
+.info .img_box {
+    float: left;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.img_box img {
+    margin-left: 20px;
+    box-shadow: 10px 10px 2px 2px rgb(72, 68, 68);
+    border: 3px solid black;
+    aspect-ratio: 0.5;
+    width: 350px;
+}
+
+div.place_hold {
+    height: 30vh;
+}
+
+
+.info p {
+    font-size: x-large;
+    font-weight: bold;
+    line-height: 60px;
+    display: inline-block;
+    text-align: left;
+    white-space: pre;
+}

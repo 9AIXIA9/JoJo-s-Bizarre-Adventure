@@ -52,40 +52,49 @@ input[type="checkbox"] {
     /* 点击取消效果 */
     background: #ffffff;
     /* 从无限中突出的效果 */
-    background-size: 100%;
+    background-size: 0%;
     pointer-events: none;
 }
 
 #inner-1:checked~.outer div:nth-child(1) {
     background-image: url(../image/dice/大乔-2.jpg);
+    background-size: 100%;
+
     opacity: 1;
 }
 
 
 #inner-2:checked~.outer div:nth-child(2) {
     background-image: url(../image/dice/二乔-2.jpg);
+    background-size: 100%;
     opacity: 1;
 }
 
 #inner-3:checked~.outer div:nth-child(3) {
     background-image: url(../image/dice/三乔-2.jpg);
+    background-size: 100%;
     opacity: 1;
 }
 
 #inner-4:checked~.outer div:nth-child(4) {
     background-image: url(../image/dice/四乔-2.png);
+    background-size: 100%;
     opacity: 1;
 }
 
 #inner-5:checked~.outer div:nth-child(5) {
     background-image: url(../image/dice/五乔-2.png);
+    background-size: 100%;
     opacity: 1;
 }
 
 #inner-6:checked~.outer div:nth-child(6) {
     background-image: url(../image/dice/六乔-2.jpg);
+    background-size: 100%;
     opacity: 1;
 }
+
+
 
 .dice .outer>div:nth-child(1) {
     transform: translateZ(calc(var(--outer-size) / 2));

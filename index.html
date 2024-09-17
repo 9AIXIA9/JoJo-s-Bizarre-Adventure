@@ -4,8 +4,8 @@
 
 <head>
     <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./css/character.css">
-    <link rel="stylesheet" href="./css/saying-slide.css">
+    <link rel="stylesheet" href="./css/JOJO_font.css">
+    <link rel="stylesheet" href="./css/saying_slide.css">
     <link rel="stylesheet" href="./css/dice.css">
     <script src="./js/audio.js"></script>
     <meta charset="UTF-8">
@@ -74,21 +74,22 @@
             box-sizing: border-box;
             border: 4px solid black;
             padding: 0;
-            box-shadow: 10px 10px 2px 2px rgb(72, 68, 68);" controls disablepictureinpicture poster="/image/横.png">
-            <source src="./video/JOJO.mp4" type="video/mp4">
+            box-shadow: 10px 10px 2px 2px rgb(72, 68, 68);" controls disablepictureinpicture
+            poster="./image/index_image/video.png">
+            <source src="./video/index.mp4" type="video/mp4">
             您的浏览器不支持视频标签。
         </video>
     </div>
 
-    <div class="saying sticky JOJO_font" style="margin: 0;">
+    <div class="saying sticky JOJO_font" style="margin-top: 20px;">
         <ul style="height: 0;width: 100vw;position: relative;">
-            <div class="saying-slide-container">
-                <div class="saying-move">
+            <div class="saying_slide_container">
+                <div class="saying_move">
                     <li>
                         <h2>人类的赞歌就是勇气的赞歌</h2>
                     </li>
                     <li>
-                        <h2>人的成长，就是战胜自己不成熟的过去</h2>
+                        <h2>如果这是我的命运的话，我就欣然接受</h2>
                     </li>
                     <li>
                         <h2>所谓觉悟，就是在漆黑的荒野上开辟出一条理当前进的光明大道</h2>
@@ -104,6 +105,9 @@
                     </li>
                     <li>
                         <h2>人就是这样，越是碰不得的东西，就越会想去碰</h2>
+                    </li>
+                    <li>
+                        <h2>心存迷惘,就不要击发</h2>
                     </li>
                 </div>
             </div>
@@ -137,10 +141,12 @@
         </audio>
     </div>
     <div class="info">
-        <h1>欢迎来到JOJO的奇妙世界!</h1>
-        <div id="part_1">
+        <div id="part_1" class="part">
+            <h1 >欢迎来到JOJO的奇妙世界!</h1>
             <div class="img_box">
-                <img src="./image/index_image/7-1.jpg" alt="第七部漫画封面-1">
+                <a href="./JOJO.html">
+                    <img src="./image/index_image/7-1.jpg" alt="第七部漫画封面-1">
+                </a>
             </div>
             <p>
                 《JOJO的奇妙冒险》是由日本漫画家荒木·飞吕彦所创作的漫画作品,简称JOJO
@@ -156,13 +162,15 @@
                 在第七部中平行世界里出现了对应波纹的回旋
                 同时也存在替身这一能力
             </p>
-        </div>
-        <div class="trans"></div>
-        <h1>JOJO故事发生背景</h1>
-        <div id="part_2">
-            <div class="img_box">
-                <img src="./image/index_image/8-1.jpg" alt="第八部漫画封面-1">
+            <div class="trans"></div>
 
+        </div>
+        <div id="part_2" class="part">
+            <h1>JOJO故事发生背景</h1>
+            <div class="img_box">
+                <a href="./JOJO.html">
+                    <img src="./image/index_image/8-1.jpg" alt="第八部漫画封面-1">
+                </a>
             </div>
             <p>
                 JOJO每一代故事发生的背景舞台是不同的
@@ -181,12 +189,16 @@
                 第八代回到了第四部《不灭钻石》的舞台杜王町
                 虽然背景一样，但情节却截然不同
             </p>
+            <div class="trans"></div>
+
         </div>
-        <div class="trans"></div>
-        <h1>JOJO的精神内核</h1>
-        <div id="part_3">
+        <div id="part_3" class="part">
+            <h1>JOJO的精神内核</h1>
+
             <div class="img_box">
-                <img src="./image/index_image/7-2.jpg" alt="第七部漫画封面-2">
+                <a href="./JOJO.html">
+                    <img src="./image/index_image/7-2.jpg" alt="第七部漫画封面-2">
+                </a>
             </div>
             <p>
                 在JOJO系列的动漫里,无论是哪一部
@@ -202,12 +214,12 @@
                 让他们发光发亮
                 更让JOJO系列动漫永恒不落后
             </p>
-        </div>
+            <div class="trans"></div>
 
+        </div>
     </div>
-    <div class="trans" id="trans_2"></div>
     <div class="JOJO_font">
-        <h1>JOJO的奇妙盒子</h1>
+        <h1 style="padding-bottom: 20px;">JOJO的奇妙盒子</h1>
         <h2>尝试点击人物图片</h2>
     </div>
     <div class="place_hold"> </div>
@@ -256,6 +268,7 @@
         </div>
 
     </div>
+
 </body>
 
 </html>
@@ -266,10 +279,8 @@
         padding: 0;
         margin: 0;
     }
-
     html {
         width: 100vw;
-
     }
 
     body {
@@ -281,103 +292,4 @@
         height: 90vh;
     }
 
-    /* 过渡 */
-    div.trans {
-        height: 30vh;
-        background: linear-gradient(to bottom, wheat, hsl(252, 92%, 74%));
-    }
-
-    #trans_2 {
-        background: linear-gradient(to top, wheat, hsl(252, 92%, 74%));
-    }
-
-
-    div.info {
-        overflow: hidden;
-        margin: 0;
-    }
-
-    #part_1 {
-        height: 120vh;
-        background-color: hsl(252, 92%, 74%);
-    }
-
-    #part_1 .img_box {
-        height: 120vh;
-    }
-
-    #part_1~.trans {
-        height: 30vh;
-        background: linear-gradient(to bottom, hsl(252, 92%, 74%), wheat);
-    }
-
-    #part_1~.trans~h1 {
-        background-color: wheat;
-        margin: 0;
-    }
-
-    #part_2 {
-        height: 120vh;
-        background-color: wheat;
-    }
-
-    #part_2 .img_box {
-        height: 120vh;
-    }
-
-    #part_2~.trans~h1 {
-        background-color: hsl(252, 92%, 74%);
-        margin: 0;
-    }
-
-    #part_2~.trans {
-        height: 30vh;
-        background: linear-gradient(to top, hsl(252, 92%, 74%), wheat);
-    }
-
-
-    #part_3 {
-        height: 100vh;
-        background-color: hsl(252, 92%, 74%);
-    }
-
-    #part_3 .img_box {
-        height: 100vh;
-    }
-
-    .info h1 {
-        background-color: hsl(252, 92%, 74%);
-        color: white;
-        -webkit-text-stroke-color: black;
-        -webkit-text-stroke-width: 1px;
-        font-style: italic;
-        text-align: center;
-        letter-spacing: 4px;
-        line-height: 3vh;
-    }
-
-    .img_box {
-        float: left;
-        box-sizing: border-box;
-    }
-
-    .img_box img {
-        margin-left: 20px;
-        box-shadow: 10px 10px 2px 2px rgb(72, 68, 68);
-        border: 3px solid black;
-        aspect-ratio: 0.5;
-        width: 350px;
-    }
-
-    .info p {
-        font-size: x-large;
-        font-weight: bold;
-        line-height: 60px;
-        display: block;
-        text-align: left;
-        white-space: pre;
-    }
-    div.place_hold{
-        height: 30vh;
-    }
 </style>
