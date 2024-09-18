@@ -70,13 +70,35 @@
             <p>
                 本网站的所有内容均仅用于学习和交流目的,未经明确授权,禁止用于任何商业用途
                 希望通过分享我的学习过程
-                能够激励和帮助到同样热爱[JOJO和代码]的朋友们
+                能够激励和帮助到同样热爱前端和JOJO的朋友们
                 同时,我也非常期待能收到大家的反馈和建议,共同进步
                 我尊重并遵守所有相关版权和隐私法律法规
                 如若侵权,联系必删
                 由于技术水平和认知能力的限制,网站内容可能存在错误或不足之处
-                对于因使用本网站内容而造成的任何损失或不便,我概不负责
+                对于因使用本网站内容而造成的任何损失或不便,概不负责
+            </p>
         </div>
+
+        <div class="form">
+            <h1>提交反馈</h1>
+            <form action="" method="get" id="form-1">
+                <fieldset>
+                    <legend>反馈类型</legend>
+                    <input type="checkbox" name="type" id="question" value="question">
+                    <label for="question">问题</label>
+                    <input type="checkbox" name="type" id="advise" value="advise">
+                    <label for="advise">建议</label>
+                </fieldset>
+                <fieldset>
+                    <legend>更改类型</legend>
+                    <label> <input type="checkbox" name="change" value="info">信息</label>
+                    <label> <input type="checkbox" name="change" value="web">网页</label>
+                </fieldset>`
+                <textarea rows="5" cols="33" form="form-1" required placeholder="请输入您的反馈!"></textarea>
+                <input type="submit" value="提交" style="width:8vw;background-color: #7bed9f;">
+            </form>
+        </div>
+
     </div>
     <b>QQ:3594165718</b>
 </body>
@@ -92,12 +114,37 @@
 
     body {
         background-color: wheat;
-        height: 100vh;
+        /* height: 100vh; */
     }
-    b{
+
+    b {
         display: block;
         position: absolute;
-        
         bottom: 0;
+    }
+
+    div.form {
+        position: absolute;
+        bottom: 10px;
+        left: 25vw;
+
+    }
+
+    fieldset {
+        margin-top: 20px;
+        text-align: center;
+        font-size: large;
+        background-color: #7bed9f5f;
+        width: 50vw;
+        border: 2px solid;
+    }
+
+    textarea {
+        margin-top: 20px;
+        background-color: #7bed9f5f;
+        font-size: large;
+        border: 2px solid;
+        width: 100%;
+        resize: none;
     }
 </style>
